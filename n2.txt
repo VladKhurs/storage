@@ -1,0 +1,156 @@
+
+web2@1122-03 MINGW64 /d/work
+$ $ ssh root@10.66.3.2
+bash: $: command not found
+
+web2@1122-03 MINGW64 /d/work
+$ ssh root@10.66.X.2
+ssh: Could not resolve hostname 10.66.x.2: Name or service not known
+
+web2@1122-03 MINGW64 /d/work
+$ ssh root@10.66.3.2
+root@10.66.3.2's password:
+Welcome to Ubuntu 24.04 LTS (GNU/Linux 6.8.0-45-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+Last login: Mon Sep 23 16:47:19 2024 from 10.22.0.3
+root@54c34808f5c4:~# ls
+root@54c34808f5c4:~# cd var
+-bash: cd: var: No such file or directory
+root@54c34808f5c4:~# ls
+root@54c34808f5c4:~# cd /var/www/html
+root@54c34808f5c4:/var/www/html# ls
+index.php  server  spa
+root@54c34808f5c4:/var/www/html# cd server
+root@54c34808f5c4:/var/www/html/server# pm2 start
+Command 'pm2' not found, did you mean:
+  command 'pmw' from deb pmw (1:5.22-1)
+  command 'gm2' from deb gm2 (4:13.2.0-2ubuntu1)
+  command 'pm' from deb powerman (2.3.27-4)
+  command 'pom2' from deb libpod-pom-perl (2.01-4)
+  command 'pmc' from deb linuxptp (4.0-1)
+  command 'pmg' from deb python3-pymatgen (2023.06.23+dfsg1-2build1)
+  command 'pms' from deb pms (0.42-1.1)
+  command 'wm2' from deb wm2 (4+svn20090216-4build1)
+  command 'tpm2' from deb tpm2-tools (5.4-1)
+Try: apt install <deb name>
+root@54c34808f5c4:/var/www/html/server# pm2 start index.js
+Command 'pm2' not found, did you mean:
+  command 'pms' from deb pms (0.42-1.1)
+  command 'pmc' from deb linuxptp (4.0-1)
+  command 'pmg' from deb python3-pymatgen (2023.06.23+dfsg1-2build1)
+  command 'pom2' from deb libpod-pom-perl (2.01-4)
+  command 'tpm2' from deb tpm2-tools (5.4-1)
+  command 'wm2' from deb wm2 (4+svn20090216-4build1)
+  command 'pm' from deb powerman (2.3.27-4)
+  command 'gm2' from deb gm2 (4:13.2.0-2ubuntu1)
+  command 'pmw' from deb pmw (1:5.22-1)
+Try: apt install <deb name>
+root@54c34808f5c4:/var/www/html/server# ^C
+root@54c34808f5c4:/var/www/html/server# npm install -g pm2
+
+added 138 packages in 6s
+
+13 packages are looking for funding
+  run `npm fund` for details
+root@54c34808f5c4:/var/www/html/server# npm2
+Command 'npm2' not found, did you mean:
+  command 'npm' from deb npm (9.2.0~ds1-2)
+  command 'npe2' from deb python3-npe2 (0.7.2-2)
+  command 'tpm2' from deb tpm2-tools (5.4-1)
+Try: apt install <deb name>
+root@54c34808f5c4:/var/www/html/server# pm2
+usage: pm2 [options] <command>
+
+pm2 -h, --help             all available commands and options
+pm2 examples               display pm2 usage examples
+pm2 <command> -h           help on a specific command
+
+Access pm2 files in ~/.pm2
+root@54c34808f5c4:/var/www/html/server# pm2 start index.js
+[PM2][ERROR] Script already launched, add -f option to force re-execution
+root@54c34808f5c4:/var/www/html/server# pm2 restart index.js
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [index.js](ids: [ 0 ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 46   │ online    │ 0%       │ 13.3mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server# pm2 restart index.js
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [index.js](ids: [ 0 ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 47   │ online    │ 0%       │ 8.0mb    │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server# pm2 restart index.js
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [index.js](ids: [ 0 ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 48   │ online    │ 0%       │ 11.5mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server# pm2 restart index.js
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [index.js](ids: [ 0 ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 49   │ online    │ 0%       │ 18.9mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server# pm2 restart index.js
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [index.js](ids: [ 0 ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 50   │ online    │ 0%       │ 19.0mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server# pm2 init simple
+File /var/www/html/server/ecosystem.config.js generated
+root@54c34808f5c4:/var/www/html/server# nano ecosystem.config.js
+root@54c34808f5c4:/var/www/html/server# rm ecosystem.config.js
+root@54c34808f5c4:/var/www/html/server# pm2 init simple
+File /var/www/html/server/ecosystem.config.js generated
+root@54c34808f5c4:/var/www/html/server# pm2 start ecosystem.config.js
+[PM2][WARN] Applications app1 not running, starting...
+[PM2][ERROR] Error: Script not found: /var/www/html/server/app.js
+root@54c34808f5c4:/var/www/html/server# pm2 stop index.js
+[PM2] Applying action stopProcessId on app [index.js](ids: [ 0 ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 50   │ stopped   │ 0%       │ 0b       │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server# pm2 start ecosystem.config.js
+[PM2][WARN] Applications app1 not running, starting...
+[PM2][ERROR] Error: Script not found: /var/www/html/server/app.js
+root@54c34808f5c4:/var/www/html/server# rm ecosystem.config.js
+root@54c34808f5c4:/var/www/html/server# pm2 start index.js `
+> ^C
+root@54c34808f5c4:/var/www/html/server# pm2 start index.js
+[PM2] Applying action restartProcessId on app [index](ids: [ 0 ])
+[PM2] [index](0) ✓
+[PM2] Process successfully started
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 50   │ online    │ 0%       │ 22.6mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/server#

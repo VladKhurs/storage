@@ -1,0 +1,11 @@
+server location http://10.66.3.2:5000/api/tarif/all
+
+
+ssh root@10.66.3.2
+
+DB_PASSWORD=8744ff
+cd /var/www/html
+cd server
+pm2 restart 0
+
+
