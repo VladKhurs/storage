@@ -1,0 +1,191 @@
+
+root@54c34808f5c4:~# pm2 restart 0
+Command 'pm2' not found, did you mean:
+  command 'wm2' from deb wm2 (4+svn20090216-4build1)
+  command 'pm' from deb powerman (2.3.27-4)
+  command 'tpm2' from deb tpm2-tools (5.4-1)
+  command 'gm2' from deb gm2 (4:13.2.0-2ubuntu1)
+  command 'pmw' from deb pmw (1:5.22-1)
+  command 'pmg' from deb python3-pymatgen (2023.06.23+dfsg1-2build1)
+  command 'pms' from deb pms (0.42-1.1)
+  command 'pom2' from deb libpod-pom-perl (2.01-4)
+  command 'pmc' from deb linuxptp (4.0-1)
+Try: apt install <deb name>
+root@54c34808f5c4:~# cd /var/www/html
+root@54c34808f5c4:/var/www/html# pm2 restart 0
+Command 'pm2' not found, did you mean:
+  command 'pm' from deb powerman (2.3.27-4)
+  command 'pms' from deb pms (0.42-1.1)
+  command 'pmc' from deb linuxptp (4.0-1)
+  command 'wm2' from deb wm2 (4+svn20090216-4build1)
+  command 'pmw' from deb pmw (1:5.22-1)
+  command 'pom2' from deb libpod-pom-perl (2.01-4)
+  command 'gm2' from deb gm2 (4:13.2.0-2ubuntu1)
+  command 'pmg' from deb python3-pymatgen (2023.06.23+dfsg1-2build1)
+  command 'tpm2' from deb tpm2-tools (5.4-1)
+Try: apt install <deb name>
+root@54c34808f5c4:/var/www/html# nvm install 16
+v16.20.2 is already installed.
+Now using node v16.20.2 (npm v8.19.4)
+root@54c34808f5c4:/var/www/html# cd api
+root@54c34808f5c4:/var/www/html/api# npm install
+npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated npmlog@5.0.1: This package is no longer supported.
+npm WARN deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated are-we-there-yet@2.0.0: This package is no longer supported.
+npm WARN deprecated gauge@3.0.2: This package is no longer supported.
+
+added 213 packages, and audited 214 packages in 6s
+
+23 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+root@54c34808f5c4:/var/www/html/api# pm2 restart 0
+Command 'pm2' not found, did you mean:
+  command 'pmw' from deb pmw (1:5.22-1)
+  command 'pmc' from deb linuxptp (4.0-1)
+  command 'wm2' from deb wm2 (4+svn20090216-4build1)
+  command 'pm' from deb powerman (2.3.27-4)
+  command 'tpm2' from deb tpm2-tools (5.4-1)
+  command 'pmg' from deb python3-pymatgen (2023.06.23+dfsg1-2build1)
+  command 'pom2' from deb libpod-pom-perl (2.01-4)
+  command 'pms' from deb pms (0.42-1.1)
+  command 'gm2' from deb gm2 (4:13.2.0-2ubuntu1)
+Try: apt install <deb name>
+root@54c34808f5c4:/var/www/html/api# ^C
+root@54c34808f5c4:/var/www/html/api# ^C
+root@54c34808f5c4:/var/www/html/api# ^C
+root@54c34808f5c4:/var/www/html/api# npm i -g pm2
+
+added 138 packages, and audited 139 packages in 6s
+
+13 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+root@54c34808f5c4:/var/www/html/api# pm2 restart 0
+Use --update-env to update environment variables
+[PM2] Applying action restartProcessId on app [0](ids: [ '0' ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 54   │ online    │ 0%       │ 19.5mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/api# npm run dev
+
+> server@1.0.0 dev
+> nodemon index.js
+
+[nodemon] 3.1.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+Executing (default): SELECT 1+1 AS result
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `user_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tarif_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `tarif_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_info_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `user_info_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'task_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `task_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_bank_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `user_bank_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'task_taken_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `task_taken_rosts`
+Executing (default): SELECT `id`, `name`, `description`, `price`, `createdAt`, `updatedAt` FROM `tarif_rosts` AS `tarif_rost` WHERE `tarif_rost`.`name` = 'Открытый';
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1811:16)
+    at listenInCluster (node:net:1859:12)
+    at Server.listen (node:net:1947:7)
+    at Function.listen (/var/www/html/api/node_modules/express/lib/application.js:635:24)
+    at start (/var/www/html/api/index.js:54:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1838:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+
+Node.js v18.19.1
+[nodemon] app crashed - waiting for file changes before starting...
+pm2 status
+^C
+root@54c34808f5c4:/var/www/html/api# pm2 status
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 54   │ online    │ 0%       │ 75.1mb   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/api# pm2 delete 0
+[PM2] Applying action deleteProcessId on app [0](ids: [ '0' ])
+[PM2] [index](0) ✓
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/api# pm2 status
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/api# pm2 start
+[PM2][ERROR] File ecosystem.config.js not found
+root@54c34808f5c4:/var/www/html/api# npm run dev
+
+> server@1.0.0 dev
+> nodemon index.js
+
+[nodemon] 3.1.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
+Executing (default): SELECT 1+1 AS result
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `user_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'tarif_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `tarif_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_info_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `user_info_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'task_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `task_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'user_bank_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `user_bank_rosts`
+Executing (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'task_taken_rosts' AND TABLE_SCHEMA = 'st3_local'
+Executing (default): SHOW INDEX FROM `task_taken_rosts`
+Executing (default): SELECT `id`, `name`, `description`, `price`, `createdAt`, `updatedAt` FROM `tarif_rosts` AS `tarif_rost` WHERE `tarif_rost`.`name` = 'Открытый';
+Server started on port 5000
+Executing (default): SELECT `id`, `name`, `description`, `price`, `createdAt`, `updatedAt` FROM `tarif_rosts` AS `tarif_rost` WHERE `tarif_rost`.`name` = 'Расширенный';
+Executing (default): SELECT `id`, `name`, `description`, `price`, `createdAt`, `updatedAt` FROM `tarif_rosts` AS `tarif_rost` WHERE `tarif_rost`.`name` = 'Специальный';
+Executing (default): SELECT `id`, `name`, `description`, `createdAt`, `updatedAt` FROM `task_rosts` AS `task_rost` WHERE `task_rost`.`name` = 'Помочь Пете' LIMIT 1;
+Executing (default): SELECT `id`, `name`, `description`, `createdAt`, `updatedAt` FROM `task_rosts` AS `task_rost` WHERE `task_rost`.`name` = 'Помочь Васе' LIMIT 1;
+Executing (default): SELECT `id`, `name`, `description`, `price`, `createdAt`, `updatedAt` FROM `tarif_rosts` AS `tarif_rost`;
+Executing (default): SELECT `id`, `name`, `description`, `price`, `createdAt`, `updatedAt` FROM `tarif_rosts` AS `tarif_rost`;
+^C
+root@54c34808f5c4:/var/www/html/api# pm2 restart
+
+  error: missing required argument `id|name|namespace|all|json|stdin'
+
+root@54c34808f5c4:/var/www/html/api# pm2 start
+[PM2][ERROR] File ecosystem.config.js not found
+root@54c34808f5c4:/var/www/html/api# pm2 start index.js
+[PM2] Starting /var/www/html/api/index.js in fork_mode (1 instance)
+[PM2] Done.
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ index              │ fork     │ 0    │ online    │ 0%       │ 7.3mb    │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
+root@54c34808f5c4:/var/www/html/api# ^C
+root@54c34808f5c4:/var/www/html/api#
